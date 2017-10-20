@@ -30,9 +30,10 @@ public class SamBootApiJpaApplication{
     		return (args) -> {
     			accountDAO.save(new Account("seungil@gmail.com","guddy","1234"));
     			accountDAO.save(new Account("seungil@gmail.com","guddy1","1234"));
-    			List<Account> list = accountDAO.findByEmail("seungil@gmail.com");
+    			//List<Account> list = accountDAO.findByEmail("seungil@gmail.com");
     			logger.debug("[LOG]");
-    			logger.debug("=========account:"+ list.get(0).toString());
+    			//logger.debug("=========account:"+ list.get(0).toString());
+    			logger.debug("******************"+ Integer.toString(accountDAO.findByInfo("email1@gmail.com", "1234")));
     		};
     }
 }
