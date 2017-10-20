@@ -1,2 +1,25 @@
 server:
   port: 18080
+spring:
+  datasource:
+    url: jdbc:h2:mem:samdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+    initialize: true
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    database: h2
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
+      path: /console
+logging:
+  level:
+    com.john.sam.api: DEBUG
+
